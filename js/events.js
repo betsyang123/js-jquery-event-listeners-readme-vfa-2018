@@ -7,8 +7,22 @@ function frameit() {
     $('img').addClass('tasty');
   })
 }
-$(document).ready(function(){
+function pressIt(){
+  $('typing').on('keydown', function(key) {
+    if (key.which === 71) {
+    alert("you have pressed g.");
+    }
+  })
+}
 
-// call functions here
-
+function submitit() {
+    $('form').on('submit', function() {
+      alert("Your form is going to be submitted now.");
+    })
+}
+$(document).ready(function() {
+  getit();
+  frameit();
+  pressit();
+  submitit();
 });
